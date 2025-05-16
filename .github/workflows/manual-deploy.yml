@@ -1,0 +1,12 @@
+name: Workflow Events
+on:
+    workflow_dispatch: # the workflow must be on the default branch.
+        inputs:
+            username:
+                description: "Your Github username"
+                required: true
+            reason:
+                description: "Running this workflow"
+                required: true
+                default: "Running before testing."
+        
