@@ -1,0 +1,15 @@
+name: my deployment tasks
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  my-deployment-01:
+    runs-on: ubuntu-latest
+    steps:
+    - name: 'Auto assign issues on repo'
+      uses: pozil/auto-assign-issues@v1.0.3
+      with:
+        repo-token: ${{secrets.GITHUB_TOKEN}}
+        assignees: khaipham2204

@@ -1,0 +1,4 @@
+name: Webhook Events
+on:
+  issues:
+    types: [opened]
